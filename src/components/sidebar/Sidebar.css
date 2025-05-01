@@ -1,0 +1,7 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 50rem;
+    margin-inline: auto;
+}

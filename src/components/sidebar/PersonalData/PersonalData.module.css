@@ -1,0 +1,38 @@
+.header {
+    padding: 2rem;
+    background-color: var(--dark-grey-color);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.inputsWrapper {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+
+.input {
+    background-color: var(--input-bg-color);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: var(--white-color);
+    font-size: 1.25rem;
+    transition: background-color 0.25s ease;
+}
+
+.input:focus,
+.input:hover {
+    background-color: var(--input-hover-bg-color);
+    border: none;
+    outline: none;
+    text-decoration-color: var(--orange-color);
+}
+
+textarea {
+    resize: none;
+}

@@ -1,0 +1,79 @@
+.header {
+    padding: 1rem 2rem;
+    background-color: var(--dark-grey-color);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.saveBtn,
+.autofillBtn {
+    background-color: var(--orange-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    max-height: 3.5rem;
+    border: none;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.saveBtn:active,
+.autofillBtn:active {
+    transform: scale(0.85);
+}
+
+
+.btns {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 2rem;
+}
+
+.githubCredit {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    align-self: center;
+}
+
+.githubBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: var(--button-grey-color);
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    text-decoration: none;
+}
+
+.githubBtn p {
+    transition: color 0.25s ease;
+}
+
+.githubBtn:hover p {
+    color: var(--orange-color);
+}
+
+.githubBtn:hover {
+    background-color: var(--input-bg-color);
+}

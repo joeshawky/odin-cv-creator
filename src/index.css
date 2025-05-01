@@ -1,68 +1,36 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  font-family: Roboto;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+:root {
+  --dark-grey-color: #1C1C1C;
+  --button-grey-color: #242424;
+  --input-bg-color: #292929;
+  --input-hover-bg-color: #333333;
+  --input-text-color: #757575;
+  --black-color: #0a0a0a;
+  --white-color: #FFFFFF;
+  --orange-color: #F9A01B;
+  --brown-color: #5C360D;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media print {
+  body * {
+    visibility: hidden;
   }
-  a:hover {
-    color: #747bff;
+  ._display_j7on2_1, ._display_j7on2_1 * {
+    visibility: visible;
   }
-  button {
-    background-color: #f9f9f9;
+  ._display_j7on2_1 {
+    position: absolute;
+    left: 0;
+    top: -200px;
+    overflow: hidden;
   }
 }

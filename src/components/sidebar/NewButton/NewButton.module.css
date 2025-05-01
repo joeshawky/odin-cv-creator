@@ -1,0 +1,22 @@
+.btn {
+    background-color: var(--input-bg-color);
+    border: none;
+    width: fit-content;
+    color: var(--white-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.btn:hover {
+    background-color: var(--input-hover-bg-color);
+    color: var(--orange-color);
+}
+
+.btn:active{
+    transform: scale(0.85);
+}
