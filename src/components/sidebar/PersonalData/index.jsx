@@ -5,11 +5,19 @@ import React, { useEffect, useState } from "react";
 import { CONSTANTS, createDefaultPersonalData } from "../../../utils/constants";
 
 
+export default function PersonalData({ onDataChanged, data}) {
 
-
-export default function PersonalData({ onDataChanged }) {
-    const [personalData, setPersonalData] = useState(createDefaultPersonalData());
     
+    const [personalData, setPersonalData] = useState(useState(() =>
+        Object.keys(data).length === 0 ? createDefaultPersonalData() : data
+      ));
+
+
+    useEffect(() => {
+        if (Object.keys(data).length > 0) {
+          setPersonalData(data);
+        }
+      }, [data]);
     
       useEffect(() => {
         onDataChanged(personalData)

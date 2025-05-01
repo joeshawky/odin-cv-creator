@@ -4,8 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSchool } from "@fortawesome/free-solid-svg-icons";
 import { CONSTANTS, createDefaultEducation } from "../../../utils/constants";
 
-export default function Education({ onDataChanged }) {
+export default function Education({ onDataChanged, data }) {
     const [education, setEducation] = useState(createDefaultEducation());
+
+    useEffect(() => {
+        if (Object.keys(data).length > 0) {
+            setEducation(data);
+        }
+      }, [data]);
 
     useEffect(() => {
         onDataChanged(education);

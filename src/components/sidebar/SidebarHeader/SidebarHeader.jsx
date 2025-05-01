@@ -4,18 +4,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faPencil } from "@fortawesome/free-solid-svg-icons";
 
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { createDefaultData } from "../../../utils/constants";
 
-export default function SidebarHeader() {
+
+export default function SidebarHeader({onDataChanged}) {
+    const autofill = () => {
+        const defaultValues = createDefaultData();
+        onDataChanged(defaultValues)
+    }
+
+    const saveCV = () => {
+        window.print()
+    }
+
     return (
         <div className="header">
             <div className="row">
                 <h1>CV Maker</h1>
                 <div className="btns">
-                    <button className="saveBtn">
+                    <button className="saveBtn" onClick={saveCV}>
                         <FontAwesomeIcon icon={faDownload} />
                         <p>Save</p>
                     </button>
-                    <button className="autofillBtn">
+                    <button className="autofillBtn" onClick={autofill}>
                         <FontAwesomeIcon icon={faPencil} />
                         <p>Autofill</p>
                     </button>

@@ -19,18 +19,39 @@
   --brown-color: #5C360D;
 }
 
-
 @media print {
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
   body * {
     visibility: hidden;
   }
-  ._display_j7on2_1, ._display_j7on2_1 * {
+
+  .content > div:nth-child(1),
+  .content > div:nth-child(1) *
+   {
+    display: none;
+  }
+
+
+  .content > div:nth-child(2),
+  .content > div:nth-child(2)  *
+   {
     visibility: visible;
   }
-  ._display_j7on2_1 {
+
+  .content > div:nth-child(2)  {
     position: absolute;
-    left: 0;
-    top: -200px;
+    left: 50%;
+    top: 0;
+      width: 100vw;     
+    height: 100vh;  
+    transform: translateX(-50%);
     overflow: hidden;
+    overflow: visible;
   }
 }
+

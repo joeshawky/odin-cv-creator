@@ -106,10 +106,16 @@ function Form({ onDataChanged }) {
     }
 }
 
-export default function WorkExperience({ onDataChanged }) {
+export default function WorkExperience({ onDataChanged, data }) {
     const [workExperiences, setWorkExperiences] = useState([
         createDefaultWorkExperience(),
     ]);
+
+    useEffect(() => {
+        if (Object.keys(data).length > 0) {
+            setWorkExperiences(data);
+        }
+      }, [data]);
 
 
     useEffect(() => {

@@ -117,13 +117,16 @@ export default function CvDisplay({ cvData }) {
     const skillsData = cvData[CONSTANTS.SKILLS_LABEL];
     const educationData = cvData[CONSTANTS.EDUCATION_LABEL];
     const contactsData = cvData[CONSTANTS.CONTACTS_LABEL];
-    console.log(`CONTAFTS DATA : `);
-    console.log(contactsData);
     return (
         <>
             <div className={styles.display}>
                 <PersonalData {...personalData} />
-                <div className={styles.line}></div>
+                {(personalData.firstName ||
+                    personalData.lastName ||
+                    personalData.niche ||
+                    personalData.description) && <div className={styles.line}></div>}
+
+
                 <WorkExperiences workExperiences={workExperienceData} />
                 <div className={styles.educationAndSkillsSection}>
                     <Education {...educationData}/>
